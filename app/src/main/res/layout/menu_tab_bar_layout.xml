@@ -11,34 +11,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/idPorcoes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Porções" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/idPorcoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Porções" />
 
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/idBebidas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bebidas" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/idBebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bebidas" />
 
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/idLanches"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lanches" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/idLanches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lanches" />
 
     </com.google.android.material.tabs.TabLayout>
 
-        <FrameLayout
-            android:layout_below="@+id/idTabLayout"
-            android:background="#ECB0F6"
-            android:id="@+id/idContainerTabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <include
+        android:id="@+id/fragPorcoes"
+        layout="@layout/fragment_porcoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTabLayout" />
 
-        </FrameLayout>
+    <include
+        android:id="@+id/fragLanches"
+        layout="@layout/fragment_lanches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragPorcoes" />
+
+    <include
+        android:id="@+id/fragBebidas"
+        layout="@layout/fragment_bebidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragLanches" />
 
 
 </RelativeLayout>
